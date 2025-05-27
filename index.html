@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>FEIRA VERDE</title> <!--A linha acima é adicionada depois, pois é a inclusão da biblioteca bootstrap-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+  let carrinho = 0;
+
+  function adicionarAoCarrinho() {
+    carrinho++;
+    document.getElementById("cart-count").textContent = carrinho;
+  }
+</script>
+
+<body>
+    <div class="d-flex justify-content-end p-3">
+        <a href="#" class="btn btn-outline-dark position-relative">
+    🛒 Carrinho
+        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      0
+        </span>
+        </a>
+    </div>
+
+    <header class="container text-center border-bottom pb-3 mb-4"> <!--Adiciona-se o header ao final dessa aula e inclui-se a classe container-->
+                
+        <h1>Feira Verde</h1> <!--Lead diferencia o parágrafo-->
+        
+        <p>Da horta ao seu lar urbano: seja bem-vindo à Feira Verde!</p>
+        <p>Aqui você encontrará</p>
+        <div> <!-- Agrupa os elementos-->
+            <p class="badge bg-secondary">TOMATE</p> <!--Badge bg-secondary transforma a palavra num distintivo (medalha)-->
+            <p class="badge bg-secondary">ALFACE</p>
+            <p class="badge bg-secondary">CENOURA</p>
+            <p class="badge bg-secondary">BATATA</p>
+            <p class="badge bg-secondary">CEBOLA</p>
+            <p class="badge bg-secondary">ABOBRINHA</p>
+            <p class="badge bg-secondary">MAÇÃ</p>
+            <p class="badge bg-secondary">PÊRA</p>
+            <p class="badge bg-secondary">UVA</p>
+            <p class="badge bg-secondary">BANANA</p>
+            <p class="badge bg-secondary">GOIABA</p>
+        </div>
+    </header>
+    <main class="container mt-3"> <!--Tag Main geralmente usada para identificar o conteúdo principal de uma pg web-->
+        <h2>VERDURAS</h2>
+        <div class="row"> <!-- Agrupa em forma de row (linha)-->
+            <div class="col-md-4"> <!--Agrupa em forma de colunas (3colunas)-->
+                <div class="card"> <!--Div que cria o cartão-->
+                    <img src="tomate.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tomate Orgânico de Apucarana</h5>
+                        <p class="card-text">Direto da propriedade de Odete e José Valdomiro da Silva e referência em produção orgânica no Paraná.
+Esses tomates vêm da família de agricultores de Apucarana que transformou sua produção em modelo de sustentabilidade e qualidade. Cultivados sem agrotóxicos, com manejo agroecológico e muita dedicação, garantem sabor, saúde e respeito ao meio ambiente.</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal1">Saiba Mais</button>
+                        <a href="#" class="btn btn-success" onclick="adicionarAoCarrinho(); alert('Produto adicionado ao carrinho!')">Comprar</a>
+                    </div>
+                
+                </div> <!--Div que cria o cartão-->
+            </div>
+            <div class="col-md-4"> <!--Agrupa em forma de colunas (3colunas)-->
+                <div class="card"> <!--Div que cria o cartão-->
+                    <img src="alface.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Alface</h5>
+                        <p class="card-text">Adicionar descrição</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal2">Saiba Mais</button>
+                        <a href="#" class="btn btn-success" onclick="adicionarAoCarrinho(); alert('Produto adicionado ao carrinho!')">Comprar</a>
+                    </div>
+                
+                </div> <!--Div que cria o cartão-->
+            </div>
+            <div class="col-md-4"> <!--Agrupa em forma de colunas (3colunas)-->
+                <div class="card"> <!--Div que cria o cartão-->
+                    <img src="cenoura.avif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Cenoura</h5>
+                        <p class="card-text">Adicionar descrição</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal3">Saiba Mais</button>
+                        <a href="#" class="btn btn-success" onclick="adicionarAoCarrinho(); alert('Produto adicionado ao carrinho!')">Comprar</a>
+                    </div>
+                
+                </div> <!--Div que cria o cartão-->
+            </div>
+        </div>
+
+    </main>
+
+    <!--Modal 1-->
+    <div class="modal" id='modal1'tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Tomate Orgânico de Apucarana</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Acesse o(s) link(s) para mais informações e conheça o produtor de seu alimento!</p>
+            </div>
+            <div class="modal-footer">
+              <a href="https://www.aen.pr.gov.br/Noticia/Propriedade-rural-de-Apucarana-vira-referencia-regional-na-producao-de-tomate-organico">Clique aqui e saiba mais!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!--Modal 2-->
+    <div class="modal" id='modal2'tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Alface</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Acesse o(s) link(s) para mais informações e conheça o produtor de seu alimento!</p>
+            </div>
+            <div class="modal-footer">
+              <a href="">Clique aqui e saiba mais!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Modal 3-->
+    <div class="modal" id='modal3'tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Cenoura</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Acesse o(s) link(s) para mais informações e conheça o produtor de seu alimento!</p>
+            </div>
+            <div class="modal-footer">
+              <a href="">Clique aqui e saiba mais!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <main class="container mt-3"> <!--Tag Main geralmente usada para identificar o conteúdo principal de uma pg web-->
+        <h2>FRUTAS</h2>
+        <div class="row"> <!-- Agrupa em forma de row (linha)-->
+            <div class="col-md-4"> <!--Agrupa em forma de colunas (3colunas)-->
+                <div class="card"> <!--Div que cria o cartão-->
+                    <img src="maça.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Maçã do Pomar Lovo</h5>
+                        <p class="card-text">Diretamente de Palmas, no sudoeste do Paraná, as maçãs do Pomar Lovo são cultivadas por uma família que mantém viva a tradição da fruticultura. Com dedicação e cuidado, oferecem frutas de qualidade, colhidas no ponto ideal de maturação, garantindo frescor e sabor incomparáveis.</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal4">Saiba Mais</button>
+                        <a href="#" class="btn btn-success" onclick="adicionarAoCarrinho(); alert('Produto adicionado ao carrinho!')">Comprar</a>
+                    </div>
+                
+                </div> <!--Div que cria o cartão-->
+            </div>
+            <div class="col-md-4"> <!--Agrupa em forma de colunas (3colunas)-->
+                <div class="card"> <!--Div que cria o cartão-->
+                    <img src="pera.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pêra</h5>
+                        <p class="card-text">Adicionar descrição</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal5">Saiba Mais</button>
+                        <a href="#" class="btn btn-success" onclick="adicionarAoCarrinho(); alert('Produto adicionado ao carrinho!')">Comprar</a>
+                    </div>
+                
+                </div> <!--Div que cria o cartão-->
+            </div>
+            <div class="col-md-4"> <!--Agrupa em forma de colunas (3colunas)-->
+                <div class="card"> <!--Div que cria o cartão-->
+                    <img src="uva.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Uva</h5>
+                        <p class="card-text">Adicionar descrição</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal6">Saiba Mais</button>
+                        <a href="#" class="btn btn-success" onclick="adicionarAoCarrinho(); alert('Produto adicionado ao carrinho!')">Comprar</a>
+                    </div>
+                
+                </div> <!--Div que cria o cartão-->
+            </div>
+        </div>
+
+    </main>
+
+    <!--Modal 4-->
+    <div class="modal" id='modal4'tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Maçã</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Acesse o(s) link(s) para mais informações e conheça o produtor de seu alimento!</p>
+            </div>
+            <div class="modal-footer">
+              <a href="https://jornalafolha.com.br/pomar-lovo-segue-tradicao-familiar-na-producao-de-maca/">Clique aqui e saiba mais!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!--Modal 5-->
+    <div class="modal" id='modal5'tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Pêra</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Acesse o(s) link(s) para mais informações e conheça o produtor de seu alimento!</p>
+            </div>
+            <div class="modal-footer">
+              <a href="">Clique aqui e saiba mais!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Modal 6-->
+    <div class="modal" id='modal6'tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Uva</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Acesse o(s) link(s) para mais informações e conheça o produtor de seu alimento!</p>
+            </div>
+            <div class="modal-footer">
+              <a href="">Clique aqui e saiba mais!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <footer class="container border-top border-1 pb-3 mb-5">
+        <h2>Entre em contato</h2>
+        <div>
+            <a href="https://github.com/Chave1r0">GitHub</a>
+            <p>E-mail: morais.silva11@escola.pr.gov.br</p>     
+        </div>
+        <p class="mt-4">© Copyright 2025. Site desenvolvido por Lucas Franco</p>
+    </footer>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous"
+    ></script><!--A linha acima é adicionada depois, pois é a inclusão da biblioteca bootstrap-->
+</body>
+</html>
