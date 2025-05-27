@@ -24,3 +24,16 @@ footer a:hover{
     color: var(--cor-secundária)
 }
 
+.badge-custom {
+  display: inline-block;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #4caf50 0%, #087f23 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  margin: 2px 6px 2px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
